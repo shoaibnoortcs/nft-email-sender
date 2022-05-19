@@ -17,7 +17,8 @@ module.exports.sendEmail = async (request, response) => {
 
         response.status(200).send({
             message: `Thank you for contacting us, we'll be in touch very soon.`,
-            data: true
+            data: true,
+            statusCode: 200
         })
     } catch (error) {
         response.status(500).send({ message: error.message })
